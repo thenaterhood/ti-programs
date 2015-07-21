@@ -1,0 +1,11 @@
+﻿:0→A
+:1→B
+:Disp "up to?"
+:Prompt C
+:While B<C
+:Disp B
+:B→D
+:A+B→B
+:D→A
+:End
+:Disp "thats all"

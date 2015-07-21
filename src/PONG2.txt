@@ -1,0 +1,56 @@
+﻿PONG 2
+:::::::::::::::
+:”Nate Levesque
+:”2/9/2011
+:::::::::::::::
+:
+:Clrhome
+:0→  Y
+:4→  U
+:5→  V
+:1→  X
+:Lbl 12
+:int((rand+.005)*10)→  B
+:If B=0:Goto 12
+:If B>=9:Goto 12
+:
+:Lbl 1
+:Clrhome
+:Output(V,16,”[“)
+:If X>=15:goto 5
+:Output (B,X,”O”)
+:getkey
+:If Ans=34:goto 22
+:If Ans=25:goto 88
+:
+:Lbl 55
+:X+1→  X
+:goto 1
+:End
+:Lbl 88
+:U-1→  U
+:V-1→  V
+:X+1→  X
+:goto 1
+:Lbl 22
+:U+1→  U
+:V+1→  V
+:X+1→  X
+:goto 1
+:End
+:Lbl 3
+:If B=V:goto 39
+:If B!=V:goto 41
+:Lbl 41
+:16→  X
+:Output(B,X,”O”)
+:Output(5,2,”Miss- Restart?”)
+:Output(6,9,Y)
+:Stop
+:Lbl 39
+:15→  X
+:Y+1→  Y
+:goto 40
+:Lbl 40
+:If X<=1:goto 12
+:If X>1:goto 40

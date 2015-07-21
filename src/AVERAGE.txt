@@ -1,0 +1,16 @@
+::::::::::::::
+"Nate Levesque
+"05/26/2011
+::::::::::::::
+
+ClrHome
+0->A
+0->C
+0->B
+While 1
+Prompt A
+A+C->C
+B+1->B
+C/B->E
+Disp E
+End

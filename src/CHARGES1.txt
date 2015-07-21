@@ -1,0 +1,50 @@
+::::::::::::::
+"nate levesque
+"3/28/2011
+::::::::::::::
+ClrHome
+Disp "Equation"
+Disp "1:R=roL/A ohms"
+Disp "2:P=IV"
+Disp "3:V=IR"
+Disp "4:P=I^^2V"
+Disp "5:P=V^^2/R"
+Disp "6:roF=roI[1+a(Tf-Ti)"
+Disp "7:Units"
+Prompt E
+ClrHome
+While E=1
+Disp "R=roL/A"
+Disp "1:R"
+Disp "2:ro"
+Disp "3:L"
+Disp "4:A"
+Prompt V
+
+While V=1
+Prompt R,L,A
+((R*L)/A)->R
+Disp R
+Stop
+End
+
+While V=2
+Prompt R,A,L
+((R*A)/L)->R
+Disp R
+Stop
+End
+End
+
+While E=7
+ClrHome
+Output(1,1,"current:"
+Output(2,1," C/sec I amp"
+Output(3,1,"resistance:"
+Output(4,1," Ohms  R ohms"
+Output(5,1,"volt:"
+Output(6,1," J/C   V V"
+Output(7,1,"pwr:"
+Output(8,1," J/sec P Watt"
+Stop
+End

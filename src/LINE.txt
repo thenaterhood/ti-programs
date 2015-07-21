@@ -1,0 +1,98 @@
+::::::::::::::
+"Nate Levesque
+::::::::::::::
+
+ClrHome
+Disp " "
+Disp " "
+Disp " "
+Disp " "
+Disp " "
+
+Output(1,1,"X1"
+Output(1,6,A)
+Output(2,1,"Y1"
+Output(2,6,B)
+Output(4,1,"X2")
+Output(4,6,C)
+Output(5,1,"Y2")
+Output(5,6,D)
+
+Disp "----------------"
+Disp "Use previous?"
+Prompt E
+If E=1
+Goto 40
+If E!=1
+Goto 41
+Lbl 41
+Disp "X1"
+Prompt A
+Disp "Y1"
+Prompt B
+Disp "X2"
+Prompt C
+Disp "Y2"
+Prompt D
+Lbl 40
+If C-A=0
+Goto 50
+If C-A!=0
+Goto 55
+Lbl 50:
+Disp "VERTICAL LINE"
+Disp "MDPT + DIST ONLY"
+
+Goto 56
+Lbl 55:
+
+(D-B)/(C-A)->M
+
+Output(1,1,"SLOPE:"
+
+Disp ""
+Disp "1:PT Slope"
+Disp "2:Slope-intercept"
+Lbl 56:
+Disp "3:Find mdpt"
+Disp "4:Distance"
+Disp "5:Done"
+Output(1,1,"SLOPE:"
+Output(1,7,M
+Prompt E
+If E=1
+Goto 1
+If E=2
+Goto 2
+If E=3
+Goto 3
+If E=4
+Goto 4
+If E=5
+Goto 5
+Lbl 1:
+Disp "             (Y-"
+Disp B
+Disp "              )="
+Disp M
+Disp "             (X-"
+Disp A
+Stop
+Lbl 2:
+(B-MA)->F
+Disp "              Y="
+Disp M
+Disp "              X+"
+Disp F
+Stop
+Lbl 3:
+(A+C)/2->X
+(B+D)/2->Y
+Disp X,Y
+Stop
+Lbl 4:
+sqrt((C-A)^^2+(D-B)^^2)->R
+Disp R
+Lbl 5:
+Stop
+Stop

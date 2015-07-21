@@ -1,0 +1,23 @@
+::::::::::::::
+"Nate Levesque
+"10/28/2010
+::::::::::::::
+
+ClrHome
+Output(1,1,"Calculates slope across a graph using X2 as the next X1"
+Pause 
+ClrHome
+Disp "X1"
+Prompt A
+Disp "Y1"
+Prompt B
+Lbl 1
+Disp "X2"
+Prompt C
+Disp "Y2"
+Prompt D
+(D-B)/(C-A)->M
+D->C
+B->A
+Disp M
+Goto 1

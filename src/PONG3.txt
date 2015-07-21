@@ -1,0 +1,68 @@
+﻿:::::::::::::::
+:"Nate Levesque
+:"2/13/2011
+:::::::::::::::
+:
+:5→V
+:1→X
+:1→O
+:.3→E
+:0→Y
+:randInt(1,8)→B
+:Lbl 1
+:Lbl A
+:ClrHome
+:
+:Output(V,16,"[")
+:If X≥16:Goto 3
+:Output(B,X,"o")
+:If X≤1:abs(O)→O
+:If X≤1 and R=0:randInt(1,8)→B
+:getKey
+:If Ans=34:Goto UP
+:If Ans=25:Goto DW
+:
+:R+E→R
+:0→U
+:If R<1:Goto 1
+:If R≥1
+:X+O→X
+:If B+T≥9:‾T→T
+:If B+T≤0:‾T→T
+:B+T→B
+:0→R
+:Goto 1
+:Lbl DW
+:If V-1<1:9→V
+:If V-1≥1:V-1→V
+:Goto 1
+:End
+:Lbl UP
+:If V+1>8:0→V
+:If V+1≤8:V+1→V
+:Goto 1
+:End
+:
+:Lbl 3
+:If B=V:Goto W
+:If B≠V:Goto L
+:
+:Lbl L
+:
+:Output(B,X,"o")
+:Output(4,4,"Miss:")
+:
+:Output(4,9,Y)
+:Output(5,4,"Best:"
+:If Y>[J](1,2):Y→[J](1,2)
+:Output(5,9,[J](1,2)
+:Stop
+:
+:Lbl W
+:‾O→O
+:Y+1→Y
+:E+.03→E
+:14→X
+:1→U
+:randInt(‾1,1)→T
+:Goto A

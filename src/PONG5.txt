@@ -1,0 +1,68 @@
+﻿PONG
+:::::::::::::::
+:"Nate Levesque
+:"3/23/2011
+:"you are free to distribute andmodify this prgmplease credit me
+:::::::::::::::
+:ClrHome
+:0→Y
+:1→X
+:1→O
+:.4→E
+:5→V
+:1→T
+:randInt(1,8)→B
+:Lbl 1
+:While X+O<17 and X+O≥1
+:
+:ClrHome
+:While B+T≥9 or B+T≤0:{-}T→T
+:End
+:
+:Output(V,16,"["
+:Output(B,X,"o"
+:Output(1,1,Y)
+:getKey
+:While Ans=34
+::If V+1>8:0→V
+::If V+1≤8:V+1→V
+:End
+:While Ans=25
+::If V-1<1:9→V
+::If V-1≥1:V-1→V
+:End
+:While F<2
+:F+E→F
+:End
+:0→F
+:X+O→X
+:B+T→B
+:
+:0→F
+:End
+:{-}O→O
+:randInt({-}1,1)→T
+:If X≥16:Goto 3
+:If X≤1:randInt(1,8)→B
+:Goto 1
+:Lbl 3
+:If V+T=B:Goto W
+:If B≠V:Goto L
+:Lbl W
+:Y+1→Y
+:15→X
+:E+.02→E
+:Goto 1
+:Lbl L
+:ClrHome
+:Output(B,X,"o"
+:Output(V,16,"["
+:Output(1,1,"Miss:"
+:Output(1,6,Y
+:Output(2,1,"Best:"
+:Output(2,6,[J](1,2)
+:If Y>[J](1,2):Y→[J](1,2)
+:Output(4,1,"Credit:"
+:Output(5,1,"Nate Levesque"
+:Output(6,1,"thenaterhood.com"
+:Stop

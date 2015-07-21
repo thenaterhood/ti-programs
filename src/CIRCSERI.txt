@@ -1,0 +1,29 @@
+::::::::::::::
+"Nate Levesque
+"4/28/2011
+::::::::::::::
+ClrHome
+1->Y
+Disp "calc amps + Req"
+Disp "Number of devs"
+Prompt D
+
+Disp "Power source"
+Prompt P
+For(A,1,D
+Prompt B
+B->[I](Y,1)
+Y+1->Y
+End
+1->Y
+0->B
+For(A,1,D
+B+[I](Y,1)->B
+Y+1->Y
+End
+P/B->I
+ClrHome
+Output(1,1,"Req="
+Output(1,6,B
+Output(2,1,"Amps="
+Output(2,6,I

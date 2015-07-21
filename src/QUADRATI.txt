@@ -1,0 +1,60 @@
+::::::::::::::
+"Nate Levesque
+"1/4/2011
+::::::::::::::
+
+ClrHome
+If theta=0
+Goto 91
+If theta=1
+Then
+2->V
+Goto 92
+End
+
+Lbl 91
+Disp "Find symm axis?"
+Prompt V,A,B
+If V=1
+Goto 63
+Lbl 61
+Prompt C
+Lbl 92
+ClrHome
+Disp " "
+Disp "Discriminant"
+B^^2-4AC->D
+Disp D
+
+Disp "Solutions"
+((~B+sqrt(abs(D)))/(2*A)->Y
+((~B-sqrt(abs(D)))/(2*A)->Z
+
+Disp Y
+Disp Z
+0->theta
+If D<0
+Goto 21
+If D=0
+Goto 22
+If D>0
+Goto 23
+Lbl 21
+Output(1,1,"2 nonreal ans")
+Stop
+Lbl 22
+Output(1,1,"1 real ans")
+Stop
+Lbl 23
+Output(1,1,"2 real ans")
+Stop
+Lbl 63
+(~(B)/(2*A))->H
+Disp H
+
+
+Disp "Find solutions?"
+Prompt V
+If V=1
+Goto 61
+Stop

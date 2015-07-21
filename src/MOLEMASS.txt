@@ -1,0 +1,46 @@
+::::::::::::::
+"Nate Levesque
+"10/12/2011
+
+::::::::::::::
+ClrHome
+0->C
+0->D
+0->Z
+While Z!=1
+Disp "qty of element,"
+Disp "atomic mass"
+Prompt A,B
+If A=0
+1->Z
+If A!=0
+(A*B)+C->C
+(D+1)->D
+ClrHome
+Disp D
+Disp C
+End
+Pause 
+Disp "looking for"
+Disp "1:grams"
+Disp "2:moles"
+Prompt T
+While T=1
+ClrHome
+Disp "how many moles?"
+Prompt Y
+Y*C->X
+ClrHome
+Disp "grams="
+Disp X
+1->theta
+End
+While T=2
+Disp "how many grams?"
+Prompt Y
+Y/C->X
+ClrHome
+Disp "moles="
+Disp X
+2->theta
+End

@@ -1,0 +1,44 @@
+ClrHome
+101325->S
+14.70->L
+760->H
+.9869->A
+100000->B
+Disp "PRESSURE?"
+Prompt P
+Disp "CONVERT:"
+Disp "FROM:"
+Disp "1:ATM"
+Disp "2:PA"
+
+Prompt F
+
+Menu("To:","ATM",1,"PA",2,"TORR",3,"LB/IN^^2",4,"MMHG",5
+
+
+Lbl 1
+If F=1
+Disp P*S
+If F=2
+Disp P/S
+End
+
+Disp P*H
+
+Disp P*L
+
+Disp P*H
+Stop
+Lbl 2
+1
+Disp P/S
+2
+Disp (P/S)*H
+3
+Disp (P/S)*L
+If T=5
+Disp (P/S)*H
+Stop
+Lbl P
+Disp P
+Stop

@@ -1,0 +1,19 @@
+﻿:ClrHome
+:
+:::::::::::::::
+:"Nate Levesque
+:::::::::::::::
+:
+:Disp "Amount"
+:Prompt P
+:Disp "Rate (decimal)"
+:Prompt R
+:Disp "Times cmpnded"
+:Prompt N
+:Disp "Time in years"
+:Prompt T
+:
+:P(1+(R/N))^(NT)→Z
+:Disp Z
+:Disp "Gain"
+:Z-P

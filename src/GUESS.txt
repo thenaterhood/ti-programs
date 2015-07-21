@@ -1,0 +1,21 @@
+﻿:
+:::::::::::::::
+:"NATE LEVESQUE
+:"3/2/2011
+:::::::::::::::
+:
+:Disp "GUESS MY NUMBER"
+:Disp "1-1000"
+:randInt(1,1000)→R
+:1→C
+:Lbl 1:"GUESS="
+:C+1→C
+:Prompt A
+:If A<R
+:Disp "Too small"
+:If A>R
+:Disp "Too big"
+:If A≠R
+:Goto 1
+:Disp "Total guesses="
+:Disp C

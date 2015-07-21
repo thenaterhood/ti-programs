@@ -1,0 +1,37 @@
+::::::::::::::
+"Nate Levesque
+"1/9/2011
+::::::::::::::
+
+ClrHome
+Disp "Newton equations"
+Disp "1 F=ma"
+
+Prompt E
+If E=1
+Goto 1
+
+Lbl 1
+ClrHome
+Disp "F=ma"
+Disp "Find?"
+Disp "1 F"
+Disp "2 m"
+Disp "3 a"
+Prompt V
+
+If V=1
+Then
+Prompt M,A
+M*A->R
+Disp R
+Stop
+End
+
+If V=2
+Then
+Prompt F,A
+F/A->R
+Disp R
+Stop
+End

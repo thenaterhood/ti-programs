@@ -1,0 +1,23 @@
+ClrHome
+
+Prompt A,B,C,X,Y
+
+abs(AX+BY+C)->Z
+sqrt(A^^2+B^^2)->W
+Disp "APPX?"
+Prompt E
+If E=1
+Goto 5
+If E!=1
+Goto 6
+Lbl 5
+Z/W->L
+Disp L
+Stop
+Lbl 6
+ClrHome
+A^^2+B^^2->D
+Output(1,1,Z)
+Output(2,1,"/sqrt("
+Output(2,4,D)
+Stop
