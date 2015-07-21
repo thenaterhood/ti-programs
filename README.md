@@ -4,6 +4,16 @@ A collection of TI-BASIC software written for the TI-84 calculator. Many of
 these will also work on previous iterations of the TI graphic calculators
 but some (such as Pong) may suffer some problems with speed.
 
+Some of these programs will use parts of Matrix J to store persistent data
+(high scores and such) or other letter variables. If you intend to use them
+and have things you'd like to keep in Matrix J or other letter variables,
+make sure you know what's going on so you don't lose anything important.
+
+Disclaimer: I haven't written or updated a TI-BASIC program in a number of years
+and haven't used any of these programs in roughly the same time. It was my
+first foray into writing actual software. Unfortunately when these were built
+I did not fully understand the joy of having well documented software.
+
 Come on now, don't cheat
 -----------
 A number of these programs may help with or may solve problems commonly found
@@ -17,6 +27,10 @@ Programs
 Repository is laid out with plaintext files of source code in src, and .8xp
 files that can be loaded directly onto a TI calculator in 8xp. 8xp files are
 not compiled files, but are a binary format.
+
+As its been some time since I've written and used any of these programs,
+these descriptions may not be fully accurate and some reverse engineering
+may be required to properly use the programs.
 
 * ATOMS: a simple program for creating and reading chemical symbols and
 creating orbital notations for atoms.
